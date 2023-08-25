@@ -14,6 +14,8 @@
 		52B4DB8E2A98C1A000E97018 /* TestDikidiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DB8D2A98C1A000E97018 /* TestDikidiTests.swift */; };
 		52B4DB982A98C1A000E97018 /* TestDikidiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DB972A98C1A000E97018 /* TestDikidiUITests.swift */; };
 		52B4DB9A2A98C1A000E97018 /* TestDikidiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DB992A98C1A000E97018 /* TestDikidiUITestsLaunchTests.swift */; };
+		52B4DBA72A98EBCB00E97018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B4DBA62A98EBCB00E97018 /* LaunchScreen.storyboard */; };
+		52B4DBAC2A98EE7100E97018 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DBAB2A98EE7100E97018 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		52B4DB932A98C1A000E97018 /* TestDikidiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDikidiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B4DB972A98C1A000E97018 /* TestDikidiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDikidiUITests.swift; sourceTree = "<group>"; };
 		52B4DB992A98C1A000E97018 /* TestDikidiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDikidiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52B4DBA62A98EBCB00E97018 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52B4DBAB2A98EE7100E97018 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +99,13 @@
 			isa = PBXGroup;
 			children = (
 				52B4DB7C2A98C19F00E97018 /* TestDikidiApp.swift */,
-				52B4DB7E2A98C19F00E97018 /* ContentView.swift */,
+				52B4DBAE2A98EE9900E97018 /* Managers */,
+				52B4DBAA2A98EE3000E97018 /* ViewModels */,
+				52B4DBA92A98EE2100E97018 /* Models */,
+				52B4DBA82A98EE1300E97018 /* Views */,
 				52B4DB802A98C1A000E97018 /* Assets.xcassets */,
 				52B4DB822A98C1A000E97018 /* Preview Content */,
+				52B4DBA62A98EBCB00E97018 /* LaunchScreen.storyboard */,
 			);
 			path = TestDikidi;
 			sourceTree = "<group>";
@@ -125,6 +133,44 @@
 				52B4DB992A98C1A000E97018 /* TestDikidiUITestsLaunchTests.swift */,
 			);
 			path = TestDikidiUITests;
+			sourceTree = "<group>";
+		};
+		52B4DBA82A98EE1300E97018 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52B4DB7E2A98C19F00E97018 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52B4DBA92A98EE2100E97018 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52B4DBAA2A98EE3000E97018 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				52B4DBAB2A98EE7100E97018 /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		52B4DBAD2A98EE8000E97018 /* NetworkingManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkingManager;
+			sourceTree = "<group>";
+		};
+		52B4DBAE2A98EE9900E97018 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				52B4DBAD2A98EE8000E97018 /* NetworkingManager */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B4DBA72A98EBCB00E97018 /* LaunchScreen.storyboard in Resources */,
 				52B4DB842A98C1A000E97018 /* Preview Assets.xcassets in Resources */,
 				52B4DB812A98C1A000E97018 /* Assets.xcassets in Resources */,
 			);
@@ -259,6 +306,7 @@
 			files = (
 				52B4DB7F2A98C19F00E97018 /* ContentView.swift in Sources */,
 				52B4DB7D2A98C19F00E97018 /* TestDikidiApp.swift in Sources */,
+				52B4DBAC2A98EE7100E97018 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,11 +468,15 @@
 				DEVELOPMENT_TEAM = VB8C9ZVKXH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DIKIDI;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -432,9 +484,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sihtmark.TestDikidi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -449,11 +504,15 @@
 				DEVELOPMENT_TEAM = VB8C9ZVKXH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = DIKIDI;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -461,9 +520,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = sihtmark.TestDikidi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
