@@ -15,6 +15,7 @@
 		52B4DB982A98C1A000E97018 /* TestDikidiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DB972A98C1A000E97018 /* TestDikidiUITests.swift */; };
 		52B4DB9A2A98C1A000E97018 /* TestDikidiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DB992A98C1A000E97018 /* TestDikidiUITestsLaunchTests.swift */; };
 		52B4DBA72A98EBCB00E97018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B4DBA62A98EBCB00E97018 /* LaunchScreen.storyboard */; };
+		52B4DBAC2A98EE7100E97018 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DBAB2A98EE7100E97018 /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		52B4DB972A98C1A000E97018 /* TestDikidiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDikidiUITests.swift; sourceTree = "<group>"; };
 		52B4DB992A98C1A000E97018 /* TestDikidiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDikidiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		52B4DBA62A98EBCB00E97018 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		52B4DBAB2A98EE7100E97018 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				52B4DB7C2A98C19F00E97018 /* TestDikidiApp.swift */,
-				52B4DB7E2A98C19F00E97018 /* ContentView.swift */,
+				52B4DBAE2A98EE9900E97018 /* Managers */,
+				52B4DBAA2A98EE3000E97018 /* ViewModels */,
+				52B4DBA92A98EE2100E97018 /* Models */,
+				52B4DBA82A98EE1300E97018 /* Views */,
 				52B4DB802A98C1A000E97018 /* Assets.xcassets */,
 				52B4DB822A98C1A000E97018 /* Preview Content */,
 				52B4DBA62A98EBCB00E97018 /* LaunchScreen.storyboard */,
@@ -128,6 +133,44 @@
 				52B4DB992A98C1A000E97018 /* TestDikidiUITestsLaunchTests.swift */,
 			);
 			path = TestDikidiUITests;
+			sourceTree = "<group>";
+		};
+		52B4DBA82A98EE1300E97018 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				52B4DB7E2A98C19F00E97018 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		52B4DBA92A98EE2100E97018 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52B4DBAA2A98EE3000E97018 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				52B4DBAB2A98EE7100E97018 /* MainViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		52B4DBAD2A98EE8000E97018 /* NetworkingManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetworkingManager;
+			sourceTree = "<group>";
+		};
+		52B4DBAE2A98EE9900E97018 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				52B4DBAD2A98EE8000E97018 /* NetworkingManager */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +306,7 @@
 			files = (
 				52B4DB7F2A98C19F00E97018 /* ContentView.swift in Sources */,
 				52B4DB7D2A98C19F00E97018 /* TestDikidiApp.swift in Sources */,
+				52B4DBAC2A98EE7100E97018 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
