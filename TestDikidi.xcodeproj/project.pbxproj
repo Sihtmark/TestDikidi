@@ -15,7 +15,12 @@
 		52B4DB982A98C1A000E97018 /* TestDikidiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DB972A98C1A000E97018 /* TestDikidiUITests.swift */; };
 		52B4DB9A2A98C1A000E97018 /* TestDikidiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DB992A98C1A000E97018 /* TestDikidiUITestsLaunchTests.swift */; };
 		52B4DBA72A98EBCB00E97018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52B4DBA62A98EBCB00E97018 /* LaunchScreen.storyboard */; };
-		52B4DBAC2A98EE7100E97018 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DBAB2A98EE7100E97018 /* MainViewModel.swift */; };
+		52B4DBAC2A98EE7100E97018 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DBAB2A98EE7100E97018 /* Router.swift */; };
+		52B637E62A99152E00583C36 /* ApiRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637E52A99152E00583C36 /* ApiRequestDispatcher.swift */; };
+		52B637E82A991AB700583C36 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637E72A991AB700583C36 /* MainViewModel.swift */; };
+		52B637EA2A99CD7100583C36 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637E92A99CD7100583C36 /* Models.swift */; };
+		52B637EC2A99E15800583C36 /* APIRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637EB2A99E15800583C36 /* APIRequestError.swift */; };
+		52B637F02A99E40400583C36 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637EF2A99E40400583C36 /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +52,12 @@
 		52B4DB972A98C1A000E97018 /* TestDikidiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDikidiUITests.swift; sourceTree = "<group>"; };
 		52B4DB992A98C1A000E97018 /* TestDikidiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDikidiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		52B4DBA62A98EBCB00E97018 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		52B4DBAB2A98EE7100E97018 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		52B4DBAB2A98EE7100E97018 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		52B637E52A99152E00583C36 /* ApiRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestDispatcher.swift; sourceTree = "<group>"; };
+		52B637E72A991AB700583C36 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		52B637E92A99CD7100583C36 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		52B637EB2A99E15800583C36 /* APIRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestError.swift; sourceTree = "<group>"; };
+		52B637EF2A99E40400583C36 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +156,7 @@
 		52B4DBA92A98EE2100E97018 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				52B637E92A99CD7100583C36 /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,7 +164,7 @@
 		52B4DBAA2A98EE3000E97018 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				52B4DBAB2A98EE7100E97018 /* MainViewModel.swift */,
+				52B637E72A991AB700583C36 /* MainViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -161,6 +172,10 @@
 		52B4DBAD2A98EE8000E97018 /* NetworkingManager */ = {
 			isa = PBXGroup;
 			children = (
+				52B637E52A99152E00583C36 /* ApiRequestDispatcher.swift */,
+				52B4DBAB2A98EE7100E97018 /* Router.swift */,
+				52B637EB2A99E15800583C36 /* APIRequestError.swift */,
+				52B637EF2A99E40400583C36 /* Token.swift */,
 			);
 			path = NetworkingManager;
 			sourceTree = "<group>";
@@ -304,9 +319,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B637E82A991AB700583C36 /* MainViewModel.swift in Sources */,
 				52B4DB7F2A98C19F00E97018 /* ContentView.swift in Sources */,
 				52B4DB7D2A98C19F00E97018 /* TestDikidiApp.swift in Sources */,
-				52B4DBAC2A98EE7100E97018 /* MainViewModel.swift in Sources */,
+				52B637EC2A99E15800583C36 /* APIRequestError.swift in Sources */,
+				52B637EA2A99CD7100583C36 /* Models.swift in Sources */,
+				52B4DBAC2A98EE7100E97018 /* Router.swift in Sources */,
+				52B637E62A99152E00583C36 /* ApiRequestDispatcher.swift in Sources */,
+				52B637F02A99E40400583C36 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
