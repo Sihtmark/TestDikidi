@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		521356D02A9A1D3700D8D989 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521356CF2A9A1D3700D8D989 /* TabBarView.swift */; };
+		521356D22A9A1D5E00D8D989 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521356D12A9A1D5E00D8D989 /* Tabs.swift */; };
 		52B4DB7D2A98C19F00E97018 /* TestDikidiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DB7C2A98C19F00E97018 /* TestDikidiApp.swift */; };
-		52B4DB7F2A98C19F00E97018 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DB7E2A98C19F00E97018 /* ContentView.swift */; };
+		52B4DB7F2A98C19F00E97018 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DB7E2A98C19F00E97018 /* MainView.swift */; };
 		52B4DB812A98C1A000E97018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B4DB802A98C1A000E97018 /* Assets.xcassets */; };
 		52B4DB842A98C1A000E97018 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B4DB832A98C1A000E97018 /* Preview Assets.xcassets */; };
 		52B4DB8E2A98C1A000E97018 /* TestDikidiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DB8D2A98C1A000E97018 /* TestDikidiTests.swift */; };
@@ -18,7 +20,7 @@
 		52B4DBAC2A98EE7100E97018 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DBAB2A98EE7100E97018 /* Router.swift */; };
 		52B637E62A99152E00583C36 /* ApiRequestDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637E52A99152E00583C36 /* ApiRequestDispatcher.swift */; };
 		52B637E82A991AB700583C36 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637E72A991AB700583C36 /* MainViewModel.swift */; };
-		52B637EA2A99CD7100583C36 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637E92A99CD7100583C36 /* Models.swift */; };
+		52B637EA2A99CD7100583C36 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637E92A99CD7100583C36 /* ResponseModels.swift */; };
 		52B637EC2A99E15800583C36 /* APIRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637EB2A99E15800583C36 /* APIRequestError.swift */; };
 		52B637F02A99E40400583C36 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637EF2A99E40400583C36 /* Token.swift */; };
 /* End PBXBuildFile section */
@@ -41,9 +43,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		521356CF2A9A1D3700D8D989 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		521356D12A9A1D5E00D8D989 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		52B4DB792A98C19F00E97018 /* TestDikidi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDikidi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B4DB7C2A98C19F00E97018 /* TestDikidiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDikidiApp.swift; sourceTree = "<group>"; };
-		52B4DB7E2A98C19F00E97018 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		52B4DB7E2A98C19F00E97018 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		52B4DB802A98C1A000E97018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52B4DB832A98C1A000E97018 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52B4DB892A98C1A000E97018 /* TestDikidiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestDikidiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,7 +59,7 @@
 		52B4DBAB2A98EE7100E97018 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		52B637E52A99152E00583C36 /* ApiRequestDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestDispatcher.swift; sourceTree = "<group>"; };
 		52B637E72A991AB700583C36 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		52B637E92A99CD7100583C36 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		52B637E92A99CD7100583C36 /* ResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModels.swift; sourceTree = "<group>"; };
 		52B637EB2A99E15800583C36 /* APIRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestError.swift; sourceTree = "<group>"; };
 		52B637EF2A99E40400583C36 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,7 +152,8 @@
 		52B4DBA82A98EE1300E97018 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				52B4DB7E2A98C19F00E97018 /* ContentView.swift */,
+				521356CF2A9A1D3700D8D989 /* TabBarView.swift */,
+				52B4DB7E2A98C19F00E97018 /* MainView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,7 +161,7 @@
 		52B4DBA92A98EE2100E97018 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				52B637E92A99CD7100583C36 /* Models.swift */,
+				521356D12A9A1D5E00D8D989 /* Tabs.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,6 +181,7 @@
 				52B4DBAB2A98EE7100E97018 /* Router.swift */,
 				52B637EB2A99E15800583C36 /* APIRequestError.swift */,
 				52B637EF2A99E40400583C36 /* Token.swift */,
+				52B637E92A99CD7100583C36 /* ResponseModels.swift */,
 			);
 			path = NetworkingManager;
 			sourceTree = "<group>";
@@ -320,10 +326,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				52B637E82A991AB700583C36 /* MainViewModel.swift in Sources */,
-				52B4DB7F2A98C19F00E97018 /* ContentView.swift in Sources */,
+				52B4DB7F2A98C19F00E97018 /* MainView.swift in Sources */,
+				521356D02A9A1D3700D8D989 /* TabBarView.swift in Sources */,
+				521356D22A9A1D5E00D8D989 /* Tabs.swift in Sources */,
 				52B4DB7D2A98C19F00E97018 /* TestDikidiApp.swift in Sources */,
 				52B637EC2A99E15800583C36 /* APIRequestError.swift in Sources */,
-				52B637EA2A99CD7100583C36 /* Models.swift in Sources */,
+				52B637EA2A99CD7100583C36 /* ResponseModels.swift in Sources */,
 				52B4DBAC2A98EE7100E97018 /* Router.swift in Sources */,
 				52B637E62A99152E00583C36 /* ApiRequestDispatcher.swift in Sources */,
 				52B637F02A99E40400583C36 /* Token.swift in Sources */,
@@ -506,7 +514,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -542,7 +550,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

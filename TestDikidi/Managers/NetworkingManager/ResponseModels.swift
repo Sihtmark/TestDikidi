@@ -1,5 +1,5 @@
 //
-//  Models.swift
+//  ResponseModels.swift
 //  TestDikidi
 //
 //  Created by sihtmark on 26.08.2023.
