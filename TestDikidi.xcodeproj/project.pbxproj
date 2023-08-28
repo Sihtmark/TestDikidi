@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		521356D02A9A1D3700D8D989 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521356CF2A9A1D3700D8D989 /* TabBarView.swift */; };
 		521356D22A9A1D5E00D8D989 /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521356D12A9A1D5E00D8D989 /* Tabs.swift */; };
+		521356E02A9C67BB00D8D989 /* PreviewResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521356DF2A9C67BA00D8D989 /* PreviewResponseModel.swift */; };
 		52B4DB7D2A98C19F00E97018 /* TestDikidiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DB7C2A98C19F00E97018 /* TestDikidiApp.swift */; };
 		52B4DB7F2A98C19F00E97018 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B4DB7E2A98C19F00E97018 /* MainView.swift */; };
 		52B4DB812A98C1A000E97018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52B4DB802A98C1A000E97018 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 /* Begin PBXFileReference section */
 		521356CF2A9A1D3700D8D989 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		521356D12A9A1D5E00D8D989 /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		521356DF2A9C67BA00D8D989 /* PreviewResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewResponseModel.swift; sourceTree = "<group>"; };
 		52B4DB792A98C19F00E97018 /* TestDikidi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestDikidi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52B4DB7C2A98C19F00E97018 /* TestDikidiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDikidiApp.swift; sourceTree = "<group>"; };
 		52B4DB7E2A98C19F00E97018 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				52B637EB2A99E15800583C36 /* APIRequestError.swift */,
 				52B637EF2A99E40400583C36 /* Token.swift */,
 				52B637E92A99CD7100583C36 /* ResponseModels.swift */,
+				521356DF2A9C67BA00D8D989 /* PreviewResponseModel.swift */,
 			);
 			path = NetworkingManager;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				52B4DBAC2A98EE7100E97018 /* Router.swift in Sources */,
 				52B637E62A99152E00583C36 /* ApiRequestDispatcher.swift in Sources */,
 				52B637F02A99E40400583C36 /* Token.swift in Sources */,
+				521356E02A9C67BB00D8D989 /* PreviewResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
