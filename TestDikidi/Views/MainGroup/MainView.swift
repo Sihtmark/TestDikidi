@@ -19,6 +19,9 @@ struct MainView: View {
                     CategoriesSection()
                     VipSection()
                     SharesSection()
+                    PopularSection()
+                    CertificatesSection()
+                    ExamplesSection()
                 }
             }
             .background(Color.green.opacity(0.08))
