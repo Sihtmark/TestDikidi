@@ -19,6 +19,7 @@ struct TabBarView: View {
                         Text(tab.title)
                     }
                     .tag(tab)
+                    .badge(1)
             }
         }
     }
