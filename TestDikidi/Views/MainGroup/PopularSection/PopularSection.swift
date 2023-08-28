@@ -11,7 +11,7 @@ struct PopularSection: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("Премиум")
+                Text("Популярное")
                     .bold()
                 Text("49")
                     .foregroundColor(.secondary)
