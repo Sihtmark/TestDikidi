@@ -9,8 +9,10 @@ import Foundation
 
 final class MainViewModel: ObservableObject {
     let apiRequestDispatcher = APIRequestDispatcher()
+    let icons = MainViewIcons()
+    let previews = Previews()
     let token = Token()
-    @Published var asdf: ResponseModel? = nil
+    @Published var responseModel: ResponseModel? = nil
 
     /// Gets all products with auth token
     ///
@@ -23,8 +25,8 @@ final class MainViewModel: ObservableObject {
             let data = try await apiRequestDispatcher.request(apiRouter: .getProductsWithAuthToken(token: token))
             let responseObject = try JSONDecoder().decode(ResponseModel.self, from: data)
             await MainActor.run {
-                self.asdf = responseObject
-                print(asdf?.data as Any)
+                self.responseModel = responseObject
+                print(responseModel?.data as Any)
             }
         } catch {
             print(URLError(.cannotDecodeRawData))
@@ -35,6 +37,4 @@ final class MainViewModel: ObservableObject {
     func getToken() -> String {
         return token.token
     }
-    
-    
 }

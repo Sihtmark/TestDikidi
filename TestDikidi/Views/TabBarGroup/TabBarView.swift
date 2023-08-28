@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @State private var selectedTab = 0
+    @State private var selectedTab: Tabs = .main
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -19,6 +19,7 @@ struct TabBarView: View {
                         Text(tab.title)
                     }
                     .tag(tab)
+                    .badge(1)
             }
         }
     }
@@ -27,5 +28,6 @@ struct TabBarView: View {
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         TabBarView()
+            .environmentObject(MainViewModel())
     }
 }
