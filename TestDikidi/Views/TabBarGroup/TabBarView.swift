@@ -27,5 +27,6 @@ struct TabBarView: View {
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
         TabBarView()
+            .environmentObject(MainViewModel())
     }
 }
