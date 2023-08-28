@@ -38,7 +38,7 @@ struct TitleSection: View {
                         .padding(.horizontal)
                     }
                     .frame(height: 40)
-                    Image(vm.icons.mapPoint)
+                    Image("MapPoint")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 20, height: 20)

@@ -59,7 +59,7 @@ struct SharesSectionSell: View {
                 }
                 .overlay(alignment: .bottomTrailing) {
                     HStack(spacing: 4) {
-                        Image(systemName: vm.icons.eye)
+                        Image(systemName: "eye")
                         Text("10")
                     }
                     .font(.caption)

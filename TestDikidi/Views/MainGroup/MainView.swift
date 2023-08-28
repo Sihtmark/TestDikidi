@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject private var vm = MainViewModel()
+    @StateObject var vm = MainViewModel()
     
     var body: some View {
         NavigationStack {
             VStack {
                 TitleSection()
                 ScrollView {
+                    asdf
                     FavoritesSection()
                     CategoriesSection()
                     VipSection()
@@ -26,7 +27,7 @@ struct MainView: View {
             }
             .background(Color.green.opacity(0.08))
             .navigationTitle("")
-        .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
