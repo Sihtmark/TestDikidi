@@ -10,6 +10,7 @@ import Foundation
 class MainViewModel: ObservableObject {
     let apiRequestDispatcher = APIRequestDispatcher()
     let icons = MainViewIcons()
+    let dateManager = DateManager()
     let token = Token()
     @Published var responseModel: ResponseModel? = nil
     @Published var favorites: [Favorite] = []
@@ -21,7 +22,7 @@ class MainViewModel: ObservableObject {
     @Published var news: [Favorite] = []
     @Published var catalog: [Catalog] = []
     @Published var exaples2: String = ""
-
+    
     func getProductsWithAuthToken(token: String) async {
         do {
             let data = try await apiRequestDispatcher.request(apiRouter: .getProductsWithAuthToken(token: token))
@@ -50,8 +51,12 @@ class MainViewModel: ObservableObject {
             print(URLError(.cannotDecodeRawData))
         }
     }
-
+    
     func getToken() -> String {
         return token.token
+    }
+    
+    func strFromDate(dateStr: String) -> String {
+        dateManager.strFromDate(dateStr: dateStr)
     }
 }

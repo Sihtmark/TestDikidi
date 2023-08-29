@@ -49,6 +49,7 @@
 		52B637EC2A99E15800583C36 /* APIRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637EB2A99E15800583C36 /* APIRequestError.swift */; };
 		52B637F02A99E40400583C36 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637EF2A99E40400583C36 /* Token.swift */; };
 		52F660692A9DB5B000C55FB9 /* SampleInstancies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F660682A9DB5B000C55FB9 /* SampleInstancies.swift */; };
+		52F660DF2A9DE5EE00C55FB9 /* DateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F660DE2A9DE5EE00C55FB9 /* DateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		52B637EB2A99E15800583C36 /* APIRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestError.swift; sourceTree = "<group>"; };
 		52B637EF2A99E40400583C36 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		52F660682A9DB5B000C55FB9 /* SampleInstancies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleInstancies.swift; sourceTree = "<group>"; };
+		52F660DE2A9DE5EE00C55FB9 /* DateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,9 +341,18 @@
 		52B4DBAE2A98EE9900E97018 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				52F660DD2A9DE5DB00C55FB9 /* DateManager */,
 				52B4DBAD2A98EE8000E97018 /* NetworkingManager */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		52F660DD2A9DE5DB00C55FB9 /* DateManager */ = {
+			isa = PBXGroup;
+			children = (
+				52F660DE2A9DE5EE00C55FB9 /* DateManager.swift */,
+			);
+			path = DateManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -496,6 +507,7 @@
 				5213570D2A9CBB9F00D8D989 /* ExamplesSection.swift in Sources */,
 				5268FACA2A9D2121000E738A /* CurrencyModel.swift in Sources */,
 				521356EA2A9C845D00D8D989 /* MainViewIcons.swift in Sources */,
+				52F660DF2A9DE5EE00C55FB9 /* DateManager.swift in Sources */,
 				5268FAC22A9D2051000E738A /* PopularModel.swift in Sources */,
 				521356EF2A9C8A1600D8D989 /* FavoritesSection.swift in Sources */,
 				5268FAC02A9D202D000E738A /* CategoryModel.swift in Sources */,
