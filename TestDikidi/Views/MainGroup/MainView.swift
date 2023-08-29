@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject var vm = MainViewModel()
+    @StateObject var mainViewModel = MainViewModel()
     
     var body: some View {
         NavigationStack {
             VStack {
                 TitleSection()
                 ScrollView {
-                    asdf
-                    FavoritesSection()
+                    if !mainViewModel.favorites.isEmpty {
+                        FavoritesSection()
+                    }
                     CategoriesSection()
                     VipSection()
                     SharesSection()
@@ -28,6 +29,9 @@ struct MainView: View {
             .background(Color.green.opacity(0.08))
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
+            .task {
+                await mainViewModel.getProductsWithAuthToken(token: mainViewModel.getToken())
+            }
         }
     }
 }
@@ -46,7 +50,7 @@ extension MainView {
         VStack {
             Button("Get data") {
                 Task {
-                    try await vm.getProductsWithAuthToken(token: vm.getToken())
+                    await mainViewModel.getProductsWithAuthToken(token: mainViewModel.getToken())
                 }
             }
         }

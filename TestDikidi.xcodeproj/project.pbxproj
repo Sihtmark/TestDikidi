@@ -48,6 +48,7 @@
 		52B637EA2A99CD7100583C36 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637E92A99CD7100583C36 /* ResponseModels.swift */; };
 		52B637EC2A99E15800583C36 /* APIRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637EB2A99E15800583C36 /* APIRequestError.swift */; };
 		52B637F02A99E40400583C36 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B637EF2A99E40400583C36 /* Token.swift */; };
+		52F660692A9DB5B000C55FB9 /* SampleInstancies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F660682A9DB5B000C55FB9 /* SampleInstancies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		52B637E92A99CD7100583C36 /* ResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModels.swift; sourceTree = "<group>"; };
 		52B637EB2A99E15800583C36 /* APIRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequestError.swift; sourceTree = "<group>"; };
 		52B637EF2A99E40400583C36 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		52F660682A9DB5B000C55FB9 /* SampleInstancies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleInstancies.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -329,6 +331,7 @@
 				52B4DBAB2A98EE7100E97018 /* Router.swift */,
 				52B637EB2A99E15800583C36 /* APIRequestError.swift */,
 				52B637EF2A99E40400583C36 /* Token.swift */,
+				52F660682A9DB5B000C55FB9 /* SampleInstancies.swift */,
 			);
 			path = NetworkingManager;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 				5213570A2A9CB95A00D8D989 /* CertificatesSection.swift in Sources */,
 				5268FAC82A9D20F4000E738A /* ListModel.swift in Sources */,
 				521356FE2A9CA4D100D8D989 /* SharesSection.swift in Sources */,
+				52F660692A9DB5B000C55FB9 /* SampleInstancies.swift in Sources */,
 				5268FACE2A9D215A000E738A /* ScheduleModel.swift in Sources */,
 				521357002A9CA5EB00D8D989 /* SharesSectionSell.swift in Sources */,
 				521356FB2A9C9FD700D8D989 /* VipSectionCell.swift in Sources */,
