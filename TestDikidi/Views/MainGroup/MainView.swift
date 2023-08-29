@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject var mainViewModel = MainViewModel()
+    @EnvironmentObject private var mainViewModel: MainViewModel
     
     var body: some View {
         NavigationStack {
@@ -21,7 +21,9 @@ struct MainView: View {
                     if !mainViewModel.categories.isEmpty {
                         CategoriesSection()
                     }
-                    VipSection()
+                    if !mainViewModel.VIPs.isEmpty {
+                        VipSection()
+                    }
                     SharesSection()
                     PopularSection()
                     CertificatesSection()

@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class MainViewModel: ObservableObject {
+class MainViewModel: ObservableObject {
     let apiRequestDispatcher = APIRequestDispatcher()
     let icons = MainViewIcons()
     let token = Token()
