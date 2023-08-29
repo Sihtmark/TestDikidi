@@ -8,16 +8,28 @@
 import SwiftUI
 
 struct VipSectionCell: View {
+    let card: Favorite
+    
     var body: some View {
         HStack(spacing: 15) {
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 50, height: 50)
+            AsyncImage(url: URL(string: card.image.thumb)) { returnedImage in
+                returnedImage
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 50, height: 50)
+            } placeholder: {
+                ProgressView()
+                    .frame(width: 50, height: 50)
+            }
+            .cornerRadius(10)
             VStack(alignment: .leading, spacing: 5) {
-                Text("asdf fdsa")
-                    .font(.body)
-                Text("asodifofijwofij")
+                Text(card.name)
+                    .font(.system(size: 14))
+                    .lineLimit(1)
+                Text(card.categories.first ?? "")
                     .font(.caption)
                     .foregroundColor(.secondary)
+                    .lineLimit(1)
             }
             Spacer()
             ZStack {
@@ -39,7 +51,7 @@ struct VipSectionCell: View {
 struct VipSectionCell_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            VipSectionCell()
+            VipSectionCell(card: sampleFavorite)
         }
         .environmentObject(MainViewModel())
     }

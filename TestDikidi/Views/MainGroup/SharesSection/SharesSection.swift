@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct SharesSection: View {
+    @EnvironmentObject private var mainViewModel: MainViewModel
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -26,8 +28,8 @@ struct SharesSection: View {
                 HStack(spacing: 15) {
                     Spacer()
                         .frame(width: 10)
-                    ForEach(1..<6) { _ in
-                        SharesSectionSell()
+                    ForEach(mainViewModel.shares, id: \.self.id) { card in
+                        SharesSectionSell(card: card)
                     }
                 }
             }

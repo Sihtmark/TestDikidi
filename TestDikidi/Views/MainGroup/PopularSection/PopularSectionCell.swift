@@ -8,24 +8,37 @@
 import SwiftUI
 
 struct PopularSectionCell: View {
-    @State private var rating: Double = 3.5
+    let card: Popular
+    
     var body: some View {
         HStack {
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 80, height: 80)
+            AsyncImage(url: URL(string: card.image.thumb)) { returnedImage in
+                returnedImage
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 80, height: 80)
+            } placeholder: {
+                ProgressView()
+                    .frame(width: 80, height: 80)
+            }
+            .cornerRadius(10)
             VStack(alignment: .leading, spacing: 5) {
-                Text("Flacon.Beauty")
-                Text("lksdjfpoijf")
+                Text(card.name)
+                    .lineLimit(1)
+                Text("\(card.street) \(card.house)")
                     .font(.caption)
                     .foregroundColor(.secondary)
-                Text("2.0 km")
+                    .lineLimit(1)
+                Text(card.distance + " КМ")
                     .font(.caption)
                     .foregroundColor(.accentColor)
+                    .lineLimit(1)
                 HStack {
                     Text("3.5")
                         .font(.caption)
                         .foregroundColor(.secondary)
-                    StarRating(rating: $rating)
+                        .lineLimit(1)
+                    StarRating(rating: card.rating)
                 }
             }
             Spacer()
@@ -38,6 +51,9 @@ struct PopularSectionCell: View {
 
 struct PopularSectionCell_Previews: PreviewProvider {
     static var previews: some View {
-        PopularSectionCell()
+        NavigationStack {
+            PopularSectionCell(card: samplePopular)
+        }
+        .environmentObject(MainViewModel())
     }
 }

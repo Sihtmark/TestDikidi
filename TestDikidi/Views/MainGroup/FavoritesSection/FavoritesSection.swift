@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct FavoritesSection: View {
+    @EnvironmentObject private var mainViewModel: MainViewModel
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Text("Избранное")
                     .bold()
-                Text("8")
+                Text("\(mainViewModel.favorites.count)")
                     .foregroundColor(.secondary)
             }
             .font(.title2)
@@ -22,8 +24,8 @@ struct FavoritesSection: View {
                 HStack(spacing: 5) {
                     Spacer()
                         .frame(width: 10)
-                    ForEach(1..<6) { _ in
-                        FavoritesSectionCell()
+                    ForEach(mainViewModel.favorites, id: \.self.id) { card in
+                        FavoritesSectionCell(card: card)
                     }
                 }
             }
@@ -34,6 +36,9 @@ struct FavoritesSection: View {
 
 struct FavoritesSection_Previews: PreviewProvider {
     static var previews: some View {
-        FavoritesSection()
+        NavigationStack {
+            FavoritesSection()
+        }
+        .environmentObject(MainViewModel())
     }
 }

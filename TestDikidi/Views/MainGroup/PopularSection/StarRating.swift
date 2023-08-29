@@ -15,7 +15,7 @@ struct StarRating: View {
         }
     }
     
-    @Binding var rating: Double
+    let rating: Double
     
     var body: some View {
         HStack(spacing: 0) {

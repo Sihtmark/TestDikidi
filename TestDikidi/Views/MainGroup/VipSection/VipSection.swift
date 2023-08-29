@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct VipSection: View {
+    @EnvironmentObject private var mainViewModel: MainViewModel
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Text("Премиум")
                     .bold()
-                Text("49")
+                Text("\(mainViewModel.VIPs.count)")
                     .foregroundColor(.secondary)
             }
             .font(.title2)
@@ -21,8 +23,8 @@ struct VipSection: View {
                 RoundedRectangle(cornerRadius: 15)
                     .fill(.white)
                 VStack {
-                    ForEach(1..<7) { _ in
-                        VipSectionCell()
+                    ForEach(mainViewModel.VIPs, id: \.self.id) { card in
+                        VipSectionCell(card: card)
                     }
                 }
             }

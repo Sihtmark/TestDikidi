@@ -7,22 +7,23 @@
 
 import Foundation
 
-final class MainViewModel: ObservableObject {
+class MainViewModel: ObservableObject {
     let apiRequestDispatcher = APIRequestDispatcher()
     let icons = MainViewIcons()
+    let dateManager = DateManager()
     let token = Token()
     @Published var responseModel: ResponseModel? = nil
     @Published var favorites: [Favorite] = []
     @Published var categories: [Category] = []
     @Published var VIPs: [Favorite] = []
-    @Published var shares: Shares? = nil
+    @Published var shares: [List] = []
     @Published var populars: [Popular] = []
     @Published var examples: String = ""
     @Published var news: [Favorite] = []
     @Published var catalog: [Catalog] = []
     @Published var exaples2: String = ""
-
-    func getProductsWithAuthToken(token: String) async throws {
+    
+    func getProductsWithAuthToken(token: String) async {
         do {
             let data = try await apiRequestDispatcher.request(apiRouter: .getProductsWithAuthToken(token: token))
             let responseObject = try JSONDecoder().decode(ResponseModel.self, from: data)
@@ -35,7 +36,7 @@ final class MainViewModel: ObservableObject {
                     self.categories = categories
                 }
                 self.VIPs = responseObject.data.blocks.vip
-                self.shares = responseObject.data.blocks.shares
+                self.shares = responseObject.data.blocks.shares.list
                 if let populars = responseObject.data.blocks.popular {
                     self.populars = populars
                 }
@@ -50,8 +51,12 @@ final class MainViewModel: ObservableObject {
             print(URLError(.cannotDecodeRawData))
         }
     }
-
+    
     func getToken() -> String {
         return token.token
+    }
+    
+    func strFromDate(dateStr: String) -> String {
+        dateManager.strFromDate(dateStr: dateStr)
     }
 }

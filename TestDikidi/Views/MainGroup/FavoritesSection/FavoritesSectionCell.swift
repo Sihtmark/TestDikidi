@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct FavoritesSectionCell: View {
+    let card: Favorite
+    
     var body: some View {
         VStack {
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 55, height: 55)
-            Text("Привилегии Мой SPAR")
+            AsyncImage(url: URL(string: card.image.thumb)) { returnedImage in
+                returnedImage
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 55, height: 55)
+            } placeholder: {
+                ProgressView()
+                    .frame(width: 55, height: 55)
+            }
+            .cornerRadius(10)
+            Text(card.name)
                 .font(.caption)
                 .frame(width: 80, height: 33)
                 .lineLimit(2)
@@ -24,7 +34,7 @@ struct FavoritesSectionCell: View {
 struct FavoritesSectionCell_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            FavoritesSectionCell()
+            FavoritesSectionCell(card: sampleFavorite)
         }
         .environmentObject(MainViewModel())
     }

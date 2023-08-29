@@ -8,12 +8,26 @@
 import SwiftUI
 
 struct CategoriesSectionCell: View {
+    let card: Category
+    
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 15)
-                .fill(.yellow)
-            Text("asdf;lkj jlka")
+            AsyncImage(url: URL(string: card.image)) { returnedImage in
+                returnedImage
+                    .resizable()
+                    .scaledToFit()
+            } placeholder: {
+                ProgressView()
+                    .frame(width: 170, height: 100)
+            }
+            .overlay {
+                Color.black.opacity(0.3)
+            }
+            .cornerRadius(15)
+            Text(card.name)
                 .foregroundColor(.white)
+                .multilineTextAlignment(.center)
+                .font(.caption)
         }
         .frame(width: 170)
     }
@@ -22,7 +36,7 @@ struct CategoriesSectionCell: View {
 struct CategoriesSectionCell_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
-            CategoriesSectionCell()
+            CategoriesSectionCell(card: sampleCategory)
         }
         .environmentObject(MainViewModel())
     }

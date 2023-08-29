@@ -8,26 +8,27 @@
 import SwiftUI
 
 struct MainView: View {
-    @StateObject var vm = MainViewModel()
+    @EnvironmentObject private var mainViewModel: MainViewModel
     
     var body: some View {
         NavigationStack {
             VStack {
                 TitleSection()
                 ScrollView {
-                    asdf
                     FavoritesSection()
                     CategoriesSection()
                     VipSection()
                     SharesSection()
                     PopularSection()
-                    CertificatesSection()
                     ExamplesSection()
                 }
             }
             .background(Color.green.opacity(0.08))
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
+            .task {
+                await mainViewModel.getProductsWithAuthToken(token: mainViewModel.getToken())
+            }
         }
     }
 }
@@ -38,18 +39,5 @@ struct ContentView_Previews: PreviewProvider {
             MainView()
         }
         .environmentObject(MainViewModel())
-    }
-}
-
-extension MainView {
-    var asdf: some View {
-        VStack {
-            Button("Get data") {
-                Task {
-                    try await vm.getProductsWithAuthToken(token: vm.getToken())
-                }
-            }
-        }
-        .padding()
     }
 }

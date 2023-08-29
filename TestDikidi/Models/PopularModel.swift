@@ -14,7 +14,7 @@ protocol PopularProtocol {
     var schedule: [ScheduleElement] { get }
     var lat: String { get }
     var lng: String { get }
-    var rating: Int { get }
+    var rating: Double { get }
     var isMaster: Bool { get }
     var currency: Currency { get }
     var distance: String { get }
@@ -29,7 +29,7 @@ struct Popular: Codable, ModelProtocol, PopularProtocol {
     let schedule: [ScheduleElement]
     let lat: String
     let lng: String
-    let rating: Int
+    let rating: Double
     let isMaster: Bool
     let currency: Currency
     let distance: String
