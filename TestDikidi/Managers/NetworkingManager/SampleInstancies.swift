@@ -19,6 +19,11 @@ let sampleImageStruct = ImageStruct(
     origin: "https://f1.dikidi.net/c2/v1045/58qt7h3kpb.jpg?size=f"
 )
 
+let sampleCategory = Category(
+    id: "1",
+    name: "Парикмахерские услуги",
+    image: "https://f1.dikidi.net/c2/v1989/pajtk900ka.jpg")
+
 /*
  let asdffdas = {
  "error": {"code": 0, "message": null},

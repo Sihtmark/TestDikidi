@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct CategoriesSection: View {
+    @EnvironmentObject private var mainViewModel: MainViewModel
     let rows: [GridItem] = [
         GridItem(.fixed(95)),
         GridItem(.fixed(95))
     ]
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -24,8 +26,8 @@ struct CategoriesSection: View {
             .font(.title2)
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHGrid(rows: rows) {
-                    ForEach(1..<7) { _ in
-                        CategoriesSectionCell()
+                    ForEach(mainViewModel.categories, id: \.self.id) { card in
+                        CategoriesSectionCell(card: sampleCategory)
                     }
                 }
                 .padding(.horizontal)

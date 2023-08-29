@@ -18,7 +18,9 @@ struct MainView: View {
                     if !mainViewModel.favorites.isEmpty {
                         FavoritesSection()
                     }
-                    CategoriesSection()
+                    if !mainViewModel.categories.isEmpty {
+                        CategoriesSection()
+                    }
                     VipSection()
                     SharesSection()
                     PopularSection()
