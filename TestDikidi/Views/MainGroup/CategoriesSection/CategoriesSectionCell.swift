@@ -18,6 +18,7 @@ struct CategoriesSectionCell: View {
                     .scaledToFit()
             } placeholder: {
                 ProgressView()
+                    .frame(width: 170, height: 100)
             }
             .overlay {
                 Color.black.opacity(0.3)

@@ -44,6 +44,7 @@ struct SharesSectionSell: View {
                                 .frame(width: 40, height: 40)
                         } placeholder: {
                             ProgressView()
+                                .frame(width: 40, height: 40)
                         }
                         .cornerRadius(10)
                         VStack(alignment: .leading, spacing: 5) {
@@ -64,6 +65,7 @@ struct SharesSectionSell: View {
                     .scaledToFit()
             } placeholder: {
                 ProgressView()
+                .frame(width: 300, height: 140, alignment: .center)
             }
                 .overlay(alignment: .topLeading) {
                     Text("\(card.discountValue) %")

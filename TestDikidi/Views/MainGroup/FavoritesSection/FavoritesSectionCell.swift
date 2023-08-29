@@ -19,6 +19,7 @@ struct FavoritesSectionCell: View {
                     .frame(width: 55, height: 55)
             } placeholder: {
                 ProgressView()
+                    .frame(width: 55, height: 55)
             }
             .cornerRadius(10)
             Text(card.name)

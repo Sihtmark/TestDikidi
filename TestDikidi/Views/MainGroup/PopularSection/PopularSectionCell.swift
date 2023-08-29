@@ -19,6 +19,7 @@ struct PopularSectionCell: View {
                     .frame(width: 80, height: 80)
             } placeholder: {
                 ProgressView()
+                    .frame(width: 80, height: 80)
             }
             .cornerRadius(10)
             VStack(alignment: .leading, spacing: 5) {

@@ -25,6 +25,8 @@ struct ExamplesSection: View {
                     .frame(maxWidth: .infinity)
             } placeholder: {
                 ProgressView()
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 300)
             }
             .cornerRadius(15)
             ZStack {
