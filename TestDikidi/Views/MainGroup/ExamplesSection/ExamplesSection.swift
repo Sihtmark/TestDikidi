@@ -8,19 +8,25 @@
 import SwiftUI
 
 struct ExamplesSection: View {
+    @EnvironmentObject private var mainViewModel: MainViewModel
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Text("Примеры работ")
                     .bold()
-                Text("49")
-                    .foregroundColor(.secondary)
+                Spacer()
             }
             .font(.title2)
-            Rectangle()
-                .frame(maxWidth: .infinity)
-                .frame(height: 250)
-            .padding(.bottom, 5)
+            AsyncImage(url: URL(string: mainViewModel.examples)) { returnedImage in
+                returnedImage
+                    .resizable()
+                    .scaledToFit()
+                    .frame(maxWidth: .infinity)
+            } placeholder: {
+                ProgressView()
+            }
+            .cornerRadius(15)
             ZStack {
                 RoundedRectangle(cornerRadius: 15)
                     .stroke(Color.accentColor, lineWidth: 1)

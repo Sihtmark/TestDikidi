@@ -22,7 +22,6 @@
 		521357032A9CB30300D8D989 /* PopularSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521357022A9CB30300D8D989 /* PopularSection.swift */; };
 		521357052A9CB36A00D8D989 /* PopularSectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521357042A9CB36A00D8D989 /* PopularSectionCell.swift */; };
 		521357072A9CB5D700D8D989 /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521357062A9CB5D700D8D989 /* StarRating.swift */; };
-		5213570A2A9CB95A00D8D989 /* CertificatesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521357092A9CB95A00D8D989 /* CertificatesSection.swift */; };
 		5213570D2A9CBB9F00D8D989 /* ExamplesSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5213570C2A9CBB9F00D8D989 /* ExamplesSection.swift */; };
 		5268FABC2A9D17F9000E738A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268FABB2A9D17F9000E738A /* Model.swift */; };
 		5268FABE2A9D2007000E738A /* FavoriteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5268FABD2A9D2007000E738A /* FavoriteModel.swift */; };
@@ -85,7 +84,6 @@
 		521357022A9CB30300D8D989 /* PopularSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSection.swift; sourceTree = "<group>"; };
 		521357042A9CB36A00D8D989 /* PopularSectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSectionCell.swift; sourceTree = "<group>"; };
 		521357062A9CB5D700D8D989 /* StarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRating.swift; sourceTree = "<group>"; };
-		521357092A9CB95A00D8D989 /* CertificatesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificatesSection.swift; sourceTree = "<group>"; };
 		5213570C2A9CBB9F00D8D989 /* ExamplesSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesSection.swift; sourceTree = "<group>"; };
 		5268FABB2A9D17F9000E738A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Model.swift; path = TestDikidi/Models/Model.swift; sourceTree = SOURCE_ROOT; };
 		5268FABD2A9D2007000E738A /* FavoriteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteModel.swift; path = TestDikidi/Models/FavoriteModel.swift; sourceTree = SOURCE_ROOT; };
@@ -154,7 +152,6 @@
 				521356F72A9C9D4B00D8D989 /* VipSection */,
 				521356FC2A9CA4BD00D8D989 /* SharesSection */,
 				521357012A9CB2EC00D8D989 /* PopularSection */,
-				521357082A9CB93A00D8D989 /* CertificatesSection */,
 				5213570B2A9CBB5800D8D989 /* ExamplesSection */,
 			);
 			path = MainGroup;
@@ -213,14 +210,6 @@
 				521357062A9CB5D700D8D989 /* StarRating.swift */,
 			);
 			path = PopularSection;
-			sourceTree = "<group>";
-		};
-		521357082A9CB93A00D8D989 /* CertificatesSection */ = {
-			isa = PBXGroup;
-			children = (
-				521357092A9CB95A00D8D989 /* CertificatesSection.swift */,
-			);
-			path = CertificatesSection;
 			sourceTree = "<group>";
 		};
 		5213570B2A9CBB5800D8D989 /* ExamplesSection */ = {
@@ -495,7 +484,6 @@
 				5268FACC2A9D213F000E738A /* ImageModel.swift in Sources */,
 				52B4DB7D2A98C19F00E97018 /* TestDikidiApp.swift in Sources */,
 				5268FAC62A9D20CF000E738A /* SharesModel.swift in Sources */,
-				5213570A2A9CB95A00D8D989 /* CertificatesSection.swift in Sources */,
 				5268FAC82A9D20F4000E738A /* ListModel.swift in Sources */,
 				521356FE2A9CA4D100D8D989 /* SharesSection.swift in Sources */,
 				52F660692A9DB5B000C55FB9 /* SampleInstancies.swift in Sources */,

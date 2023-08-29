@@ -20,7 +20,6 @@ struct MainView: View {
                     VipSection()
                     SharesSection()
                     PopularSection()
-                    CertificatesSection()
                     ExamplesSection()
                 }
             }
@@ -40,18 +39,5 @@ struct ContentView_Previews: PreviewProvider {
             MainView()
         }
         .environmentObject(MainViewModel())
-    }
-}
-
-extension MainView {
-    var asdf: some View {
-        VStack {
-            Button("Get data") {
-                Task {
-                    await mainViewModel.getProductsWithAuthToken(token: mainViewModel.getToken())
-                }
-            }
-        }
-        .padding()
     }
 }
