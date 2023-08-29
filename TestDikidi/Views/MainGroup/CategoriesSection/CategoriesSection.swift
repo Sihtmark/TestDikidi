@@ -19,18 +19,21 @@ struct CategoriesSection: View {
             HStack {
                 Text("Категории")
                     .bold()
-                Text("49")
+                Text("\(mainViewModel.categories.count)")
                     .foregroundColor(.secondary)
+                Spacer()
             }
             .padding(.horizontal)
             .font(.title2)
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHGrid(rows: rows) {
-                    ForEach(mainViewModel.categories, id: \.self.id) { card in
-                        CategoriesSectionCell(card: sampleCategory)
+            if !mainViewModel.categories.isEmpty {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHGrid(rows: rows) {
+                        ForEach(mainViewModel.categories, id: \.self.id) { card in
+                            CategoriesSectionCell(card: sampleCategory)
+                        }
                     }
+                    .padding(.horizontal)
                 }
-                .padding(.horizontal)
             }
         }
         .padding(.bottom)

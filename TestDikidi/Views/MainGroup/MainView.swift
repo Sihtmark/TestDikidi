@@ -15,15 +15,9 @@ struct MainView: View {
             VStack {
                 TitleSection()
                 ScrollView {
-                    if !mainViewModel.favorites.isEmpty {
-                        FavoritesSection()
-                    }
-                    if !mainViewModel.categories.isEmpty {
-                        CategoriesSection()
-                    }
-                    if !mainViewModel.VIPs.isEmpty {
-                        VipSection()
-                    }
+                    FavoritesSection()
+                    CategoriesSection()
+                    VipSection()
                     SharesSection()
                     PopularSection()
                     CertificatesSection()

@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct PopularSection: View {
+    @EnvironmentObject private var mainViewModel: MainViewModel
+    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
                 Text("Популярное")
                     .bold()
-                Text("49")
+                Text("\(mainViewModel.populars.count)")
                     .foregroundColor(.secondary)
             }
             .padding(.horizontal)
@@ -22,8 +24,8 @@ struct PopularSection: View {
                 HStack(spacing: 5) {
                     Spacer()
                         .frame(width: 10)
-                    ForEach(1..<6) { _ in
-                        PopularSectionCell()
+                    ForEach(mainViewModel.populars, id: \.self.id) { card in
+                        PopularSectionCell(card: card)
                     }
                 }
             }
